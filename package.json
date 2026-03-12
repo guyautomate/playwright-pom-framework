@@ -3,7 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test": "cucumber-js tests/features/**/*.feature --require-module ts-node/register --require tests/step-definitions/**/*.ts",
+    "test:login": "cucumber-js tests/features/**/*.feature --require-module ts-node/register --require tests/step-definitions/**/*.ts --tags @login",
+    "report": "npx playwright show-report"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -17,6 +21,7 @@
     "typescript": "^5.9.3"
   },
   "dependencies": {
+    "dotenv": "^17.3.1",
     "gherkin": "^9.0.0"
   }
 }
