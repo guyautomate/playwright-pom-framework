@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "cucumber-js tests/features/**/*.feature --require-module ts-node/register --require tests/step-definitions/**/*.ts",
-    "test:login": "cucumber-js tests/features/**/*.feature --require-module ts-node/register --require tests/step-definitions/**/*.ts --tags @login",
+    "test": "cucumber-js tests/features/**/*.feature --require-module ts-node/register --require tests/support/hooks.ts --require tests/step-definitions/**/*.ts",
+    "test:login": "cucumber-js tests/features/**/*.feature --require-module ts-node/register --require tests/support/hooks.ts --require tests/step-definitions/**/*.ts --tags @login",
     "report": "npx playwright show-report"
   },
   "keywords": [],
